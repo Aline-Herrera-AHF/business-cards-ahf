@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>João Silva — Cartão Digital</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #f0f2f5;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      padding: 24px;
+    }
+
+    .card-wrapper {
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 8px 40px rgba(0,0,0,0.12);
+      max-width: 420px;
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .card-image {
+      width: 100%;
+      display: block;
+    }
+
+    .actions {
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 14px 20px;
+      border-radius: 12px;
+      font-size: 15px;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+      border: none;
+      transition: opacity 0.2s, transform 0.1s;
+    }
+
+    .btn:active { transform: scale(0.98); opacity: 0.85; }
+
+    .btn-primary {
+      background: #1a1a2e;
+      color: white;
+    }
+
+    .btn-secondary {
+      background: #f0f2f5;
+      color: #1a1a2e;
+    }
+
+    .icon { font-size: 18px; }
+
+    .footer {
+      text-align: center;
+      padding: 0 24px 20px;
+      font-size: 12px;
+      color: #aaa;
+    }
+  </style>
+</head>
+<body>
+  <div class="card-wrapper">
+
+    <!-- Imagem do card — substitua pelo caminho real -->
+    <img class="card-image" src="card.png" alt="Cartão de João Silva" />
+
+    <div class="actions">
+
+      <!-- Botão salvar contato (VCF) -->
+      <a class="btn btn-primary" href="contato.vcf" download="joao-silva.vcf">
+        <span class="icon">👤</span>
+        Salvar contato
+      </a>
+
+      <!-- Botão baixar PDF -->
+      <a class="btn btn-secondary" href="card.pdf" download="cartao-joao-silva.pdf">
+        <span class="icon">⬇️</span>
+        Baixar cartão em PDF
+      </a>
+
+    </div>
+
+    <p class="footer">© Sua Empresa · Cartão Digital</p>
+
+  </div>
+</body>
+</html>
